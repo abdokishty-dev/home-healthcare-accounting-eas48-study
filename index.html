@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>المحاسبة عن نشاط الرعاية الطبية المنزلية وتأجير الأجهزة الطبية وفق معايير المحاسبة المصرية (EAS 48 / EAS 49) | عبدالفتاح قشطي</title>
+<meta name="description" content="دراسة تطبيقية في المحاسبة عن نشاط الرعاية الطبية المنزلية: قوائم مالية متوقعة، نسب، WACC وDCF، قائمة الدخل وEPS، سياسة الإيراد والمقابل المتغير، إهلاك الأجهزة المؤجرة، بروتوكول التقفيل (الكاش الطائر وECL والمخزون)، وأهم 5 إجراءات مراجعة جوهرية — وفق معايير المحاسبة المصرية وIFRS."><meta name="author" content="عبدالفتاح قشطي">
+<meta name="keywords" content="Financial Closure, Year-End Close, Audit Program, IFRS 15, IFRS 9, EAS, ECL, Home Healthcare, التقفيل المالي, المراجعة, معايير المحاسبة المصرية">
+<meta property="og:type" content="article"><meta property="og:locale" content="ar_AR"><meta property="og:title" content="المحاسبة عن نشاط الرعاية الطبية المنزلية وتأجير الأجهزة الطبية وفق معايير المحاسبة المصرية (EAS 48 / EAS 49)"><meta property="og:description" content="دراسة تطبيقية في المحاسبة عن نشاط الرعاية الطبية المنزلية: قوائم مالية متوقعة، نسب، WACC وDCF، قائمة الدخل وEPS، سياسة الإيراد والمقابل المتغير، إهلاك الأجهزة المؤجرة، بروتوكول التقفيل (الكاش الطائر وECL والمخزون)، وأهم 5 إجراءات مراجعة جوهرية — وفق معايير المحاسبة المصرية وIFRS.">
+<meta property="og:image" content="og-cover.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="المحاسبة عن نشاط الرعاية الطبية المنزلية وتأجير الأجهزة الطبية وفق معايير المحاسبة المصرية (EAS 48 / EAS 49)"><meta name="twitter:description" content="دراسة تطبيقية في المحاسبة عن نشاط الرعاية الطبية المنزلية: قوائم مالية متوقعة، نسب، WACC وDCF، قائمة الدخل وEPS، سياسة الإيراد والمقابل المتغير، إهلاك الأجهزة المؤجرة، بروتوكول التقفيل (الكاش الطائر وECL والمخزون)، وأهم 5 إجراءات مراجعة جوهرية — وفق معايير المحاسبة المصرية وIFRS."><meta name="twitter:image" content="og-cover.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23060e1c'/%3E%3Cpath d='M50 12 L46 34 L58 34 Z M30 88 L30 55 L42 55 L42 88 Z M58 88 L58 40 L70 40 L70 88 Z' fill='%23d9a94f'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Changa:wght@400;500;600;700;800&family=Tajawal:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --bg: #060e1c;
+    --bg-surface: #0c1c34;
+    --bg-elevated: #12274a;
+    --line: rgba(150,180,220,0.14);
+    --accent: #4fa3ff;
+    --accent-dim: rgba(79,163,255,0.14);
+    --gold: #d9a94f;
+    --gold-dim: rgba(217,169,79,0.14);
+    --red: #e8604a;
+    --red-dim: rgba(232,96,74,0.14);
+    --text: #eaf1fb;
+    --text-muted: #90a7c6;
+    --text-faint: #5c7396;
+    --font-display: 'Changa', sans-serif;
+    --font-body: 'Tajawal', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  *{ box-sizing: border-box; }
+  html{ scroll-behavior: smooth; }
+
+  body{
+    margin:0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    line-height: 1.85;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body::before{
+    content:"";
+    position: fixed;
+    inset:0;
+    background:
+      radial-gradient(ellipse 900px 500px at 15% -10%, rgba(79,163,255,0.10), transparent 60%),
+      radial-gradient(ellipse 700px 500px at 100% 20%, rgba(217,169,79,0.06), transparent 55%);
+    pointer-events:none;
+    z-index:0;
+  }
+
+  .wrap{ max-width: 1040px; margin: 0 auto; padding: 0 28px; position:relative; z-index:1; }
+
+  /* ---------- Nav ---------- */
+  .nav{
+    display:flex; align-items:center; justify-content:space-between;
+    padding: 26px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .nav .mark{
+    font-family: var(--font-display);
+    font-weight:700; font-size: 1.05rem; letter-spacing:.3px;
+    color: var(--text);
+  }
+  .nav .mark span{ color: var(--accent); }
+  .nav .tag{
+    font-family: var(--font-mono);
+    font-size: .72rem; color: var(--text-faint);
+    border:1px solid var(--line); border-radius:100px;
+    padding: 6px 14px; letter-spacing: .5px;
+  }
+
+  /* ---------- Hero ---------- */
+  .hero{ padding: 76px 0 40px; }
+  .eyebrow{
+    font-family: var(--font-mono);
+    font-size: .78rem; color: var(--accent);
+    letter-spacing: 1px; text-transform: uppercase;
+    display:flex; align-items:center; gap:10px; margin-bottom: 22px;
+  }
+  .eyebrow::before{ content:""; width:26px; height:1px; background: var(--accent); display:inline-block; }
+
+  h1{
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: clamp(2.1rem, 5vw, 3.3rem);
+    line-height: 1.28;
+    margin: 0 0 22px;
+    letter-spacing: .2px;
+  }
+  h1 em{ font-style: normal; color: var(--gold); }
+
+  .lede{
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    max-width: 700px;
+    margin: 0 0 44px;
+    font-weight: 400;
+  }
+
+  .byline{ display:flex; align-items:center; gap:14px; margin-bottom: 54px; }
+  .byline .dot{
+    width:38px; height:38px; border-radius:50%;
+    background: linear-gradient(135deg, var(--accent), var(--gold));
+    display:flex; align-items:center; justify-content:center;
+    font-family: var(--font-display); font-weight:700; font-size: .95rem;
+    color: #061024; flex-shrink:0;
+  }
+  .byline .who b{ font-weight:700; color: var(--text); display:block; font-size:.95rem; }
+  .byline .who span{ color: var(--text-faint); font-size: .82rem; }
+
+  /* ---------- Fault line signature ---------- */
+  .faultline{
+    position: relative; border: 1px solid var(--line); border-radius: 18px;
+    overflow: hidden; background: var(--bg-surface); margin-bottom: 20px;
+  }
+  .faultline .grid{ display:grid; grid-template-columns: 1fr 1fr; }
+  .fl-panel{ padding: 36px 30px 32px; position: relative; z-index: 2; }
+  .fl-panel.profit{ background: linear-gradient(160deg, var(--gold-dim), transparent 70%); }
+  .fl-panel.deficit{ background: linear-gradient(200deg, var(--accent-dim), transparent 70%); }
+  .fl-label{ font-family: var(--font-mono); font-size: .72rem; letter-spacing: .5px; text-transform: uppercase; color: var(--text-faint); margin-bottom: 10px; }
+  .fl-value{ font-family: var(--font-mono); font-weight: 700; font-size: clamp(1.3rem, 3.6vw, 1.9rem); line-height: 1.25; margin-bottom: 8px; }
+  .fl-panel.profit .fl-value{ color: var(--gold); }
+  .fl-panel.deficit .fl-value{ color: var(--accent); }
+  .fl-desc{ font-size: .88rem; color: var(--text-muted); max-width: 300px; }
+  .fl-crack{ position:absolute; inset:0; z-index:1; opacity:.9; }
+  .fl-caption{
+    display:flex; align-items:center; justify-content:space-between;
+    padding: 14px 30px; border-top: 1px solid var(--line);
+    font-family: var(--font-mono); font-size: .74rem; color: var(--text-faint);
+  }
+  .fl-caption b{ color: var(--accent); font-weight:500; }
+
+  @media (max-width: 620px){
+    .faultline .grid{ grid-template-columns: 1fr; }
+    .fl-panel.deficit{ border-top: 1px solid var(--line); }
+  }
+
+  /* ---------- Sections ---------- */
+  section{ padding: 64px 0; border-top: 1px solid var(--line); }
+  section:first-of-type{ border-top:none; }
+  .s-head{ margin-bottom: 34px; max-width: 760px; }
+  .s-num{ font-family: var(--font-mono); color: var(--accent); font-size: .78rem; letter-spacing: .5px; margin-bottom: 10px; display:block; }
+  h2{ font-family: var(--font-display); font-weight: 700; font-size: clamp(1.5rem, 3.2vw, 2rem); margin: 0 0 14px; line-height: 1.4; }
+  h3{ font-family: var(--font-display); font-weight:600; color: var(--text); }
+  .s-sub{ color: var(--text-muted); font-size: 1rem; }
+  p{ color: var(--text-muted); font-size: 1rem; margin: 0 0 16px; }
+  p strong{ color: var(--text); font-weight: 700; }
+  ul.plain{ margin:0 0 16px; padding-inline-start: 20px; color: var(--text-muted); }
+  ul.plain li{ margin-bottom: 8px; }
+  ul.plain li b{ color: var(--text); }
+
+  .reveal{ opacity:0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
+  .reveal.in{ opacity:1; transform: translateY(0); }
+
+  /* ---------- Cause cards ---------- */
+  .cards{ display:grid; grid-template-columns: repeat(3, 1fr); gap:18px; margin-top: 8px; }
+  .card{ background: var(--bg-surface); border: 1px solid var(--line); border-radius: 14px; padding: 26px 22px; }
+  .card .num{ font-family: var(--font-mono); color: var(--accent); font-size: .8rem; margin-bottom: 14px; display:block; }
+  .card h3{ font-size: 1.05rem; margin: 0 0 10px; font-weight: 600; color: var(--text); }
+  .card p{ font-size: .92rem; margin:0; }
+  @media (max-width: 800px){ .cards{ grid-template-columns: 1fr; } }
+
+  /* ---------- Function map (five elements of the power equation) ---------- */
+  .funcmap{ display:grid; grid-template-columns: repeat(5, 1fr); gap: 14px; margin-top: 8px; }
+  .funcmap .fm-item{ background: var(--bg-surface); border:1px solid var(--line); border-radius: 12px; padding: 18px 16px; text-align:center; }
+  .funcmap .fm-num{ font-family: var(--font-mono); color: var(--accent); font-size:.72rem; display:block; margin-bottom:10px; }
+  .funcmap .fm-title{ font-family: var(--font-display); font-weight:700; font-size: .98rem; color: var(--text); margin-bottom:6px; }
+  .funcmap .fm-desc{ font-size:.8rem; color: var(--text-muted); margin:0; }
+  @media (max-width: 900px){ .funcmap{ grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 480px){ .funcmap{ grid-template-columns: 1fr; } }
+
+  /* ---------- Equations / formula blocks ---------- */
+  .eq-block{ background: var(--bg-surface); border: 1px solid var(--line); border-radius: 14px; padding: 26px 26px 22px; margin-bottom: 18px; }
+  .eq-title{ font-family: var(--font-display); font-weight:600; font-size: 1rem; color: var(--text); margin-bottom: 14px; }
+  .eq-formula{
+    font-family: var(--font-mono); direction: ltr; text-align: left;
+    background: var(--bg-elevated); border: 1px solid var(--line); border-radius: 10px;
+    padding: 18px 20px; color: var(--accent); font-size: .88rem; overflow-x:auto; margin-bottom: 14px;
+    line-height: 1.9;
+  }
+  .eq-note{ font-size: .9rem; color: var(--text-muted); margin:0; }
+  .eq-note b{ color: var(--gold); font-weight:700; }
+
+  /* ---------- Table ---------- */
+  .tbl-wrap{ overflow-x: auto; border: 1px solid var(--line); border-radius: 14px; margin-bottom: 18px; }
+  table{ border-collapse: collapse; width: 100%; min-width: 640px; }
+  thead th{
+    font-family: var(--font-mono); font-size: .74rem; letter-spacing:.4px; text-transform: uppercase;
+    color: var(--accent); background: var(--bg-surface); text-align: right; padding: 16px 18px;
+    border-bottom: 1px solid var(--line);
+  }
+  tbody td{ padding: 16px 18px; font-size: .9rem; color: var(--text-muted); border-bottom: 1px solid var(--line); vertical-align: top; }
+  tbody tr:last-child td{ border-bottom:none; }
+  tbody td:first-child{ color: var(--text); font-weight: 600; }
+  tbody tr:nth-child(even){ background: rgba(255,255,255,0.015); }
+
+  /* ---------- Verdict / definition boxes ---------- */
+  .verdict{ margin-top: 10px; background: var(--red-dim); border: 1px solid rgba(232,96,74,0.35); border-radius: 14px; padding: 26px 28px; }
+  .verdict .v-tag{ font-family: var(--font-mono); font-size: .74rem; letter-spacing:.5px; color: var(--red); display:block; margin-bottom:10px; text-transform:uppercase; }
+  .verdict .v-num{ font-family: var(--font-display); font-weight: 700; font-size: 1.4rem; color: var(--text); display:block; margin-bottom: 10px; }
+  .verdict p{ color: var(--text); font-size: .95rem; margin:0; }
+  .verdict p.small{ color: var(--text-muted); margin-top:10px; font-size: .85rem; }
+
+  .verdict.good{ background: var(--gold-dim); border-color: rgba(217,169,79,0.35); }
+  .verdict.good .v-tag{ color: var(--gold); }
+
+  /* ---------- Signals list ---------- */
+  .signals{ display:flex; flex-direction: column; gap: 0; }
+  .signal{ display:grid; grid-template-columns: 44px 1fr; gap: 18px; padding: 24px 0; border-top: 1px solid var(--line); }
+  .signal:first-child{ border-top: 1px solid var(--line); }
+  .signal .ico{
+    width:44px; height:44px; border-radius:10px; background: var(--accent-dim);
+    border: 1px solid rgba(79,163,255,0.3); display:flex; align-items:center; justify-content:center;
+    color: var(--accent); font-family: var(--font-mono); font-weight:700; flex-shrink:0;
+  }
+  .signal h3{ font-size: 1.02rem; margin:0 0 6px; color: var(--text); font-weight:600; }
+  .signal p{ margin:0; font-size: .92rem; }
+
+  /* ---------- Strategy / compare list ---------- */
+  .strategies{ display:grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .strategy{ border: 1px solid var(--line); border-radius: 14px; padding: 24px; background: var(--bg-surface); border-right: 3px solid var(--accent); }
+  .strategy.alt{ border-right-color: var(--gold); }
+  .strategy h3{ font-size: 1rem; margin: 0 0 14px; font-weight:600; }
+  .strategy ul{ margin:0; padding-inline-start: 18px; }
+  .strategy ul li{ font-size: .9rem; color: var(--text-muted); margin-bottom: 8px; }
+  .strategy ul li:last-child{ margin-bottom:0; }
+  @media (max-width: 700px){ .strategies{ grid-template-columns: 1fr; } }
+
+  /* ---------- Ownership / attribution table ---------- */
+  .attrib-wrap{ overflow-x:auto; border:1px solid var(--line); border-radius:14px; margin-bottom:18px; }
+  table.attrib{ border-collapse: collapse; width:100%; min-width: 700px; }
+  table.attrib thead th{
+    font-family: var(--font-mono); font-size:.72rem; letter-spacing:.4px; text-transform:uppercase;
+    text-align:right; padding:16px 18px; border-bottom:1px solid var(--line); background: var(--bg-surface);
+  }
+  table.attrib thead th.std{ color: var(--accent); }
+  table.attrib thead th.own{ color: var(--gold); }
+  table.attrib tbody td{ padding:16px 18px; font-size:.88rem; color: var(--text-muted); border-bottom:1px solid var(--line); vertical-align:top; }
+  table.attrib tbody tr:last-child td{ border-bottom:none; }
+  table.attrib tbody tr:nth-child(even){ background: rgba(255,255,255,0.015); }
+  table.attrib td.concept{ color: var(--text); font-weight:600; }
+
+  .stance{
+    background: var(--bg-surface); border: 1px solid var(--line); border-right: 3px solid var(--gold);
+    border-radius: 14px; padding: 28px 26px; margin-top: 22px;
+  }
+  .stance .stance-tag{ font-family: var(--font-mono); font-size:.72rem; color: var(--gold); letter-spacing:.4px; margin-bottom:10px; display:block; }
+  .stance p{ margin:0; font-size:.95rem; color: var(--text); }
+  .stance p + p{ margin-top:10px; color: var(--text-muted); font-size:.9rem; }
+  .refs{ display:flex; flex-wrap:wrap; gap:10px; margin-top: 6px; }
+  .ref-chip{
+    font-family: var(--font-mono); font-size: .74rem; color: var(--text-muted);
+    border: 1px solid var(--line); border-radius: 100px; padding: 8px 14px;
+    background: var(--bg-surface);
+  }
+  .ref-chip b{ color: var(--gold); font-weight:600; }
+
+  /* ---------- Author / closing ---------- */
+  .closing{ text-align:center; padding: 70px 0 40px; }
+  .closing .avatar{
+    width: 64px; height:64px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent), var(--gold));
+    margin: 0 auto 20px; display:flex; align-items:center; justify-content:center;
+    font-family: var(--font-display); font-weight:700; font-size: 1.3rem; color:#061024;
+  }
+  .closing h2{ margin-bottom: 8px; }
+  .closing p{ max-width: 600px; margin: 0 auto 6px; }
+  .closing .role{ color: var(--accent); font-size: .9rem; font-family: var(--font-mono); }
+
+  /* ---------- Back to top ---------- */
+  #back-to-top{
+    position:fixed; bottom:26px; left:26px; width:46px; height:46px; border-radius:50%;
+    background: var(--bg-elevated); border:1px solid var(--accent); color: var(--accent);
+    display:flex; align-items:center; justify-content:center; cursor:pointer;
+    opacity:0; pointer-events:none; transform:translateY(8px);
+    transition: opacity .25s ease, transform .25s ease; z-index:100; font-size:20px;
+  }
+  #back-to-top.visible{ opacity:1; pointer-events:auto; transform:translateY(0); }
+  #back-to-top:hover{ background: var(--accent); color:#061024; }
+
+  /* ---------- Export / print button ---------- */
+  #export-pdf{
+    position:fixed; bottom:26px; right:26px;
+    display:flex; align-items:center; gap:8px;
+    height:46px; padding: 0 18px; border-radius:100px;
+    background: var(--accent); border:1px solid var(--accent); color:#061024;
+    font-family: var(--font-body); font-weight:700; font-size:.86rem;
+    cursor:pointer; z-index:100;
+    box-shadow: 0 8px 24px rgba(79,163,255,0.25);
+    transition: background .2s ease, transform .2s ease;
+  }
+  #export-pdf:hover{ background: var(--gold); border-color: var(--gold); transform: translateY(-2px); }
+  #export-pdf svg{ width:17px; height:17px; flex-shrink:0; }
+
+  /* ---------- Print stylesheet ---------- */
+  @media print{
+    body{ background:#fff !important; color:#111 !important; }
+    body::before{ display:none !important; }
+    .nav, #back-to-top, #export-pdf{ display:none !important; }
+    .wrap{ max-width:100% !important; padding:0 18px !important; }
+    section{ border-top:1px solid #ddd !important; padding:26px 0 !important; break-inside: avoid; }
+    .reveal{ opacity:1 !important; transform:none !important; }
+    h1, h2, h3{ color:#0a1730 !important; }
+    h1 em{ color:#8a6a1f !important; }
+    p, .s-sub, .lede{ color:#333 !important; }
+    .eyebrow, .s-num{ color:#3366aa !important; }
+    .card, .eq-block, .strategy, .verdict, .signal .ico, .funcmap .fm-item, .tbl-wrap{
+      background:#f6f8fb !important; border:1px solid #ccc !important; color:#111 !important;
+      box-shadow:none !important;
+    }
+    .eq-formula{ background:#eef2f7 !important; color:#0a3d91 !important; border:1px solid #ccc !important; }
+    thead th{ background:#eef2f7 !important; color:#0a3d91 !important; }
+    tbody td{ color:#222 !important; border-bottom:1px solid #ddd !important; }
+    .fl-panel.profit, .fl-panel.deficit{ background:#f6f8fb !important; }
+    .fl-value{ color:#0a1730 !important; }
+    footer.site-footer{ background:#fff !important; color:#333 !important; border-top:1px solid #ccc !important; }
+    .footer-meta, .footer-rule{ color:#555 !important; }
+    a{ color:#0a3d91 !important; }
+  }
+
+  /* ---------- Site footer ---------- */
+  footer.site-footer{
+    background:#040a16; color:#8b93a1;
+    padding: 40px 28px 26px;
+    border-top: 1px solid rgba(79,163,255,.12);
+  }
+  footer.site-footer .f-inner{ max-width: 984px; margin:0 auto; }
+  footer.site-footer a{ color: var(--text); }
+  .footer-top{ display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:24px; padding-bottom:24px; }
+  .footer-id{ display:flex; align-items:center; gap:16px; }
+  .footer-photo{ width:56px; height:56px; border-radius:50%; object-fit:cover; object-position:top center; border:1px solid rgba(79,163,255,.35); flex-shrink:0; }
+  .footer-id .footer-name{ font-family:'Tajawal', sans-serif; font-size:20px; color: var(--text); font-weight:700; }
+  .footer-id .footer-role{ font-family:'Tajawal', sans-serif; font-size:12.5px; color: var(--accent); margin-top:5px; letter-spacing:.02em; }
+  .footer-id .footer-brand{ font-size:13px; color:#9aa7ba; margin-top:10px; }
+  .footer-meta{ text-align:left; font-family:'Tajawal', sans-serif; font-size:12px; color:#6d7889; line-height:2; }
+  .footer-meta .dot{ color: var(--accent); margin-left:6px; }
+  .footer-rule{ border-top:1px solid rgba(79,163,255,.18); padding-top:18px; font-size:12px; color:#5f6878; text-align:center; }
+  @media (max-width: 640px){
+    .footer-top{ flex-direction: column; }
+    .footer-meta{ text-align:right; }
+  }
+
+  ::selection{ background: var(--accent-dim); color: var(--text); }
+
+  @media (prefers-reduced-motion: reduce){
+    *{ animation: none !important; transition: none !important; }
+    .reveal{ opacity:1; transform:none; }
+  }
+</style>
+</head><body>
+<div class="wrap">
+<nav class="nav"><div class="mark">ع<span>.ق</span></div><div class="tag">دراسة تطبيقية · المحاسبة عن الرعاية الطبية المنزلية</div></nav>
+<header class="hero"><div class="eyebrow">Accounting for Home Healthcare · EAS 48 / EAS 49 · FY 2026</div>
+<h1>المحاسبة عن نشاط الرعاية الطبية المنزلية: <em>الإيراد (معيار 48) والتأجير والتقفيل والمراجعة</em></h1>
+<p class="lede">دراسة تطبيقية في المحاسبة عن نشاط شركة مساهمة مصرية في الرعاية الطبية المنزلية وتأجير الأجهزة الطبية، تضع القوائم المالية والتدفقات النقدية والتنبؤ والتحليل والتقييم بالقيمة الحالية والسياسات والإيضاحات وبروتوكول التقفيل وبرنامج المراجعة في مرجع واحد وفق معايير المحاسبة المصرية (EAS) وما يقابلها في IFRS. الأرقام والنسب في الجداول توضيحية لشرح الآلية، وتُعاير على بيانات الشركة الفعلية.</p>
+<div class="byline"><div class="dot">ع.ق</div><div class="who"><b>عبدالفتاح قشطي</b><span>مطور نظم ورقابة مالية — المنظومة الحديثة للإدارة المالية</span></div></div>
+<div class="faultline reveal"><div class="grid"><div class="fl-panel deficit"><div class="fl-label">قبل</div><div class="fl-value">تقفيل عشوائي</div><div class="fl-desc">كاش طائر غير مطابق، مدينون بلا مصادقات، مخزون بلا جرد فعلي.</div></div><div class="fl-panel profit"><div class="fl-label">بعد</div><div class="fl-value">تقفيل موثّق</div><div class="fl-desc">مطابقات ومخصصات مدروسة وسياسات واضحة ومراجعة بلا مفاجآت.</div></div></div>
+<div class="fl-caption"><span>الشركة نفسها — الأدلة مختلفة</span><b>الفارق في جودة الدليل قبل توقيع المراجع</b></div></div></header>
+<section class="reveal"><div class="s-head"><span class="s-num">01 — قائمة الدخل</span><h2>قائمة الدخل الشامل التفصيلية: فعلي 2026 وتنبؤ 2027–2031</h2><p class="s-sub">أرقام بالألف جنيه. افتراضات النمو والنسب في القسم 09.</p></div><div class="tbl-wrap"><table><thead><tr><th>البند</th><th>2026 فعلي</th><th>2027 تنبؤ</th><th>2028 تنبؤ</th><th>2029 تنبؤ</th><th>2030 تنبؤ</th><th>2031 تنبؤ</th></tr></thead><tbody><tr><td>إيرادات الخدمات الطبية</td><td>62,000</td><td>71,300</td><td>81,282</td><td>91,036</td><td>100,139</td><td>108,151</td></tr><tr><td>إيرادات تأجير الأجهزة</td><td>18,000</td><td>20,160</td><td>22,378</td><td>24,615</td><td>26,585</td><td>28,446</td></tr><tr><td><b>إجمالي الإيرادات</b></td><td><b>80,000</b></td><td><b>91,460</b></td><td><b>103,660</b></td><td><b>115,651</b></td><td><b>126,724</b></td><td><b>136,596</b></td></tr><tr><td>نمو الإيرادات</td><td>—</td><td>14.3%</td><td>13.3%</td><td>11.6%</td><td>9.6%</td><td>7.8%</td></tr><tr><td>أجور الأطقم بالزيارة</td><td>(24,000)</td><td>(27,600)</td><td>(31,464)</td><td>(35,240)</td><td>(38,764)</td><td>(41,865)</td></tr><tr><td>المستهلكات الطبية</td><td>(11,000)</td><td>(12,650)</td><td>(14,421)</td><td>(16,152)</td><td>(17,767)</td><td>(19,188)</td></tr><tr><td>انتقالات الفروع</td><td>(4,000)</td><td>(4,600)</td><td>(5,244)</td><td>(5,873)</td><td>(6,461)</td><td>(6,977)</td></tr><tr><td>إهلاك الأجهزة المؤجرة</td><td>(5,000)</td><td>(5,600)</td><td>(6,216)</td><td>(6,838)</td><td>(7,385)</td><td>(7,902)</td></tr><tr><td><b>تكلفة الحصول على الخدمة</b></td><td><b>(44,000)</b></td><td><b>(50,450)</b></td><td><b>(57,345)</b></td><td><b>(64,102)</b></td><td><b>(70,376)</b></td><td><b>(75,932)</b></td></tr><tr><td><b>مجمل الربح</b></td><td><b>36,000</b></td><td><b>41,010</b></td><td><b>46,315</b></td><td><b>51,549</b></td><td><b>56,348</b></td><td><b>60,664</b></td></tr><tr><td>مصروفات بيع وإدارية وعمومية</td><td>(16,000)</td><td>(18,292)</td><td>(20,732)</td><td>(23,130)</td><td>(25,345)</td><td>(27,319)</td></tr><tr><td>خسائر ائتمانية متوقعة</td><td>(2,500)</td><td>(2,858)</td><td>(3,239)</td><td>(3,614)</td><td>(3,960)</td><td>(4,269)</td></tr><tr><td><b>ربح التشغيل</b></td><td><b>17,500</b></td><td><b>19,860</b></td><td><b>22,343</b></td><td><b>24,805</b></td><td><b>27,044</b></td><td><b>29,077</b></td></tr><tr><td>تكاليف التمويل</td><td>(2,500)</td><td>(2,530)</td><td>(1,870)</td><td>(1,210)</td><td>(550)</td><td>0</td></tr><tr><td><b>الربح قبل الضريبة</b></td><td><b>15,000</b></td><td><b>17,330</b></td><td><b>20,473</b></td><td><b>23,595</b></td><td><b>26,494</b></td><td><b>29,077</b></td></tr><tr><td>ضريبة الدخل 22.5%</td><td>(3,375)</td><td>(3,899)</td><td>(4,606)</td><td>(5,309)</td><td>(5,961)</td><td>(6,542)</td></tr><tr><td><b>صافي الربح</b></td><td><b>11,625</b></td><td><b>13,431</b></td><td><b>15,867</b></td><td><b>18,286</b></td><td><b>20,533</b></td><td><b>22,534</b></td></tr><tr><td>EBITDA (للتحليل)</td><td>23,500</td><td>26,460</td><td>29,559</td><td>32,642</td><td>35,428</td><td>37,978</td></tr><tr><td>نصيب السهم الأساسي (جنيه)</td><td>1.02</td><td>1.18</td><td>1.40</td><td>1.62</td><td>1.82</td><td>2.00</td></tr></tbody></table></div><p class="eq-note" style="margin-top:8px">ملحوظة: نصيب السهم بعد حصة العاملين 10% ومكافأة المجلس 300 ألف و10 ملايين سهم، كما في القسم 04. إهلاك الأجهزة مبوب في التكلفة، و1,000 ألف إهلاك باقي الأصول داخل المصروفات الإدارية.</p><div class="stance"><span class="stance-tag">قراءة</span><p>هامش مجمل الربح يتحسن قليلاً مع زيادة وزن التأجير الأقل تكلفة تشغيلية، بينما تبقى الربحية مرهونة بنمو الزيارات وكفاءة الأجور والتحصيل.</p></div></section><section class="reveal"><div class="s-head"><span class="s-num">02 — قائمة المركز المالي</span><h2>قائمة المركز المالي المتوقعة</h2><p class="s-sub">التصنيف المتداول وغير المتداول وفق EAS 1. أصول والتزامات العقود (إيراد مستحق ومقدم) تُعرض منفصلة وفق EAS 48.</p></div><div class="tbl-wrap"><table><thead><tr><th>البند</th><th>2026 فعلي</th><th>2027 تنبؤ</th><th>2028 تنبؤ</th><th>2029 تنبؤ</th><th>2030 تنبؤ</th><th>2031 تنبؤ</th></tr></thead><tbody><tr><td>النقدية وما في حكمها</td><td>6,000</td><td>3,594</td><td>2,251</td><td>1,760</td><td>3,546</td><td>9,308</td></tr><tr><td>عملاء ومدينون بالصافي بعد مخصص ECL</td><td>17,000</td><td>19,435</td><td>22,028</td><td>24,576</td><td>26,929</td><td>29,027</td></tr><tr><td>إيراد مستحق (أصل عقد: زيارات منفذة لم تُفوتر)</td><td>3,000</td><td>3,450</td><td>3,933</td><td>4,405</td><td>4,845</td><td>5,233</td></tr><tr><td>المخزون الطبي بالصافي بعد المخصص</td><td>5,000</td><td>5,750</td><td>6,555</td><td>7,342</td><td>8,076</td><td>8,722</td></tr><tr><td>مصروفات مقدمة</td><td>2,000</td><td>2,286</td><td>2,591</td><td>2,891</td><td>3,168</td><td>3,415</td></tr><tr><td><b>إجمالي الأصول المتداولة</b></td><td><b>33,000</b></td><td><b>34,516</b></td><td><b>37,358</b></td><td><b>40,974</b></td><td><b>46,564</b></td><td><b>55,704</b></td></tr><tr><td>أجهزة طبية مؤجرة (صافي)</td><td>30,000</td><td>33,600</td><td>37,296</td><td>41,026</td><td>44,308</td><td>47,409</td></tr><tr><td>أصول ثابتة أخرى (صافي)</td><td>8,000</td><td>9,146</td><td>10,366</td><td>11,565</td><td>12,672</td><td>13,660</td></tr><tr><td>أصول غير ملموسة</td><td>1,000</td><td>1,000</td><td>1,000</td><td>1,000</td><td>1,000</td><td>1,000</td></tr><tr><td><b>إجمالي الأصول غير المتداولة</b></td><td><b>39,000</b></td><td><b>43,746</b></td><td><b>48,662</b></td><td><b>53,591</b></td><td><b>57,980</b></td><td><b>62,069</b></td></tr><tr><td><b>إجمالي الأصول</b></td><td><b>72,000</b></td><td><b>78,262</b></td><td><b>86,020</b></td><td><b>94,565</b></td><td><b>104,544</b></td><td><b>117,773</b></td></tr><tr><td>موردون</td><td>6,500</td><td>7,475</td><td>8,522</td><td>9,544</td><td>10,498</td><td>11,338</td></tr><tr><td>مصروفات مستحقة وأجور</td><td>4,000</td><td>4,573</td><td>5,183</td><td>5,783</td><td>6,336</td><td>6,830</td></tr><tr><td>إيراد مقدم (التزام عقد: باقات وإيجار مدفوع مقدماً)</td><td>2,000</td><td>2,286</td><td>2,591</td><td>2,891</td><td>3,168</td><td>3,415</td></tr><tr><td>مخصص مطالبات ومرفوضات</td><td>1,000</td><td>1,143</td><td>1,296</td><td>1,446</td><td>1,584</td><td>1,707</td></tr><tr><td>ضريبة دخل مستحقة</td><td>1,500</td><td>1,733</td><td>2,047</td><td>2,359</td><td>2,649</td><td>2,908</td></tr><tr><td>الجزء المتداول من القروض</td><td>3,000</td><td>3,000</td><td>3,000</td><td>2,500</td><td>0</td><td>0</td></tr><tr><td><b>إجمالي الالتزامات المتداولة</b></td><td><b>18,000</b></td><td><b>20,211</b></td><td><b>22,639</b></td><td><b>24,523</b></td><td><b>24,236</b></td><td><b>26,198</b></td></tr><tr><td>قروض طويلة الأجل</td><td>8,500</td><td>5,500</td><td>2,500</td><td>0</td><td>0</td><td>0</td></tr><tr><td><b>إجمالي الالتزامات</b></td><td><b>26,500</b></td><td><b>25,711</b></td><td><b>25,139</b></td><td><b>24,523</b></td><td><b>24,236</b></td><td><b>26,198</b></td></tr><tr><td>رأس المال</td><td>10,000</td><td>10,000</td><td>10,000</td><td>10,000</td><td>10,000</td><td>10,000</td></tr><tr><td>احتياطي قانوني</td><td>3,500</td><td>4,172</td><td>4,965</td><td>5,000</td><td>5,000</td><td>5,000</td></tr><tr><td>أرباح محتجزة</td><td>32,000</td><td>38,380</td><td>45,916</td><td>55,042</td><td>65,308</td><td>76,575</td></tr><tr><td><b>إجمالي حقوق الملكية</b></td><td><b>45,500</b></td><td><b>52,551</b></td><td><b>60,881</b></td><td><b>70,042</b></td><td><b>80,308</b></td><td><b>91,575</b></td></tr><tr><td><b>إجمالي الالتزامات وحقوق الملكية</b></td><td><b>72,000</b></td><td><b>78,262</b></td><td><b>86,020</b></td><td><b>94,565</b></td><td><b>104,544</b></td><td><b>117,773</b></td></tr></tbody></table></div><p class="eq-note" style="margin-top:8px">فرق التوازن في كل السنوات: 0.00. الاحتياطي القانوني 5% من صافي الربح حتى يبلغ 50% من رأس المال (5,000).</p><div class="stance"><span class="stance-tag">تنبيه</span><p>العملاء بالصافي بعد مخصص ECL والمخزون بالصافي بعد مخصص الهبوط. تفاصيل حركة المخصصات والاحتياطي في القسم 03.</p></div></section><section class="reveal"><div class="s-head"><span class="s-num">03 — قائمة التدفقات النقدية</span><h2>التدفقات النقدية: ربط الاستحقاق بالنقد والمخصصات والاحتياطيات</h2><p class="s-sub">في العقود طويلة الأجل يختلف الربح عن النقد بفعل الإيراد المستحق والمقدم والمصروف المقدم والمستحق والمخصصات (EAS 4).</p></div><h3 style='margin:8px 0'>أ. الطريقة غير المباشرة</h3><div class="tbl-wrap"><table><thead><tr><th>البند</th><th>2027 تنبؤ</th><th>2028 تنبؤ</th><th>2029 تنبؤ</th><th>2030 تنبؤ</th><th>2031 تنبؤ</th></tr></thead><tbody><tr><td>صافي الربح</td><td>13,431</td><td>15,867</td><td>18,286</td><td>20,533</td><td>22,534</td></tr><tr><td>(+) إهلاك أجهزة وأصول</td><td>6,600</td><td>7,216</td><td>7,838</td><td>8,385</td><td>8,902</td></tr><tr><td>(+) مخصص ECL (غير نقدي)</td><td>2,858</td><td>3,239</td><td>3,614</td><td>3,960</td><td>4,269</td></tr><tr><td>(+) زيادة مخصص هبوط المخزون</td><td>45</td><td>48</td><td>47</td><td>44</td><td>39</td></tr><tr><td>(+) زيادة مخصص المطالبات والمرفوضات</td><td>143</td><td>152</td><td>150</td><td>138</td><td>123</td></tr><tr><td>(−) زيادة العملاء إجمالاً بعد الإعدام</td><td>(5,293)</td><td>(5,832)</td><td>(6,162)</td><td>(6,313)</td><td>(6,366)</td></tr><tr><td>(−) زيادة الإيراد المستحق</td><td>(450)</td><td>(483)</td><td>(472)</td><td>(440)</td><td>(388)</td></tr><tr><td>(−) زيادة المخزون إجمالاً</td><td>(795)</td><td>(853)</td><td>(834)</td><td>(778)</td><td>(685)</td></tr><tr><td>(−) زيادة المصروفات المقدمة</td><td>(286)</td><td>(305)</td><td>(300)</td><td>(277)</td><td>(247)</td></tr><tr><td>(+) زيادة الموردين</td><td>975</td><td>1,046</td><td>1,023</td><td>954</td><td>840</td></tr><tr><td>(+) زيادة المصروفات المستحقة</td><td>573</td><td>610</td><td>600</td><td>554</td><td>494</td></tr><tr><td>(+) زيادة الإيراد المقدم</td><td>286</td><td>305</td><td>300</td><td>277</td><td>247</td></tr><tr><td>(+) زيادة الضريبة المستحقة</td><td>233</td><td>314</td><td>312</td><td>290</td><td>258</td></tr><tr><td><b>صافي التدفق من الأنشطة التشغيلية</b></td><td><b>18,320</b></td><td><b>21,326</b></td><td><b>24,401</b></td><td><b>27,326</b></td><td><b>30,019</b></td></tr><tr><td>شراء أجهزة طبية للتأجير</td><td>(9,200)</td><td>(9,912)</td><td>(10,567)</td><td>(10,667)</td><td>(11,003)</td></tr><tr><td>شراء أصول ثابتة أخرى</td><td>(2,146)</td><td>(2,220)</td><td>(2,199)</td><td>(2,107)</td><td>(1,987)</td></tr><tr><td><b>صافي التدفق من الأنشطة الاستثمارية</b></td><td><b>(11,346)</b></td><td><b>(12,132)</b></td><td><b>(12,766)</b></td><td><b>(12,774)</b></td><td><b>(12,990)</b></td></tr><tr><td>سداد قروض</td><td>(3,000)</td><td>(3,000)</td><td>(3,000)</td><td>(2,500)</td><td>0</td></tr><tr><td>توزيعات أرباح</td><td>(6,380)</td><td>(7,537)</td><td>(9,125)</td><td>(10,266)</td><td>(11,267)</td></tr><tr><td><b>صافي التدفق من الأنشطة التمويلية</b></td><td><b>(9,380)</b></td><td><b>(10,537)</b></td><td><b>(12,125)</b></td><td><b>(12,766)</b></td><td><b>(11,267)</b></td></tr><tr><td><b>صافي التغير في النقدية</b></td><td><b>(2,406)</b></td><td><b>(1,343)</b></td><td><b>(491)</b></td><td><b>1,786</b></td><td><b>5,762</b></td></tr><tr><td>رصيد أول المدة</td><td>6,000</td><td>3,594</td><td>2,251</td><td>1,760</td><td>3,546</td></tr><tr><td><b>رصيد آخر المدة</b></td><td><b>3,594</b></td><td><b>2,251</b></td><td><b>1,760</b></td><td><b>3,546</b></td><td><b>9,308</b></td></tr><tr><td>جودة الأرباح: التدفق التشغيلي ÷ صافي الربح</td><td>1.36</td><td>1.34</td><td>1.33</td><td>1.33</td><td>1.33</td></tr><tr><td>التدفق الحر للمنشأة بعد الفوائد (تشغيلي − رأسمالي)</td><td>6,974</td><td>9,194</td><td>11,635</td><td>14,552</td><td>17,029</td></tr></tbody></table></div><h3 style='margin:18px 0 8px'>ب. الطريقة المباشرة (مصادر النقد الداخل والخارج)</h3><div class="tbl-wrap"><table><thead><tr><th>البند</th><th>2027 تنبؤ</th><th>2028 تنبؤ</th><th>2029 تنبؤ</th><th>2030 تنبؤ</th><th>2031 تنبؤ</th></tr></thead><tbody><tr><td>مقبوضات من العملاء وجهات التأمين</td><td>86,003</td><td>97,650</td><td>109,317</td><td>120,247</td><td>130,089</td></tr><tr><td>مدفوعات للأطقم والموردين والمصروفات</td><td>(61,487)</td><td>(70,162)</td><td>(78,709)</td><td>(86,700)</td><td>(93,785)</td></tr><tr><td>ضرائب دخل مدفوعة</td><td>(3,666)</td><td>(4,292)</td><td>(4,997)</td><td>(5,671)</td><td>(6,284)</td></tr><tr><td>فوائد مدفوعة</td><td>(2,530)</td><td>(1,870)</td><td>(1,210)</td><td>(550)</td><td>0</td></tr><tr><td><b>صافي التدفق التشغيلي (طريقة مباشرة)</b></td><td><b>18,320</b></td><td><b>21,326</b></td><td><b>24,401</b></td><td><b>27,326</b></td><td><b>30,019</b></td></tr></tbody></table></div><p class="eq-note" style="margin-top:8px">مقبوضات العملاء = الإيراد − زيادة العملاء بعد الإعدام − زيادة الإيراد المستحق + زيادة الإيراد المقدم. الفرق بين الطريقتين: 0.00. الفوائد مبوبة تشغيلية، ويجوز تبويبها تمويلية وفق EAS 4 بشرط الثبات.</p><h3 style='margin:18px 0 8px'>ج. مصادر النقد واستخداماته</h3><div class="tbl-wrap"><table><thead><tr><th>مصادر النقد 2027–2031</th><th>ألف جنيه</th><th>%</th></tr></thead><tbody><tr><td>مقبوضات العملاء وجهات التأمين</td><td>543,306</td><td>100%</td></tr></tbody></table></div><div class="tbl-wrap"><table><thead><tr><th>استخدامات النقد 2027–2031</th><th>ألف جنيه</th><th>% من المقبوضات</th></tr></thead><tbody><tr><td>مدفوعات تشغيلية</td><td>390,844</td><td>71.9%</td></tr><tr><td>ضرائب</td><td>24,910</td><td>4.6%</td></tr><tr><td>فوائد</td><td>6,160</td><td>1.1%</td></tr><tr><td>شراء أجهزة وأصول</td><td>62,009</td><td>11.4%</td></tr><tr><td>سداد قروض</td><td>11,500</td><td>2.1%</td></tr><tr><td>توزيعات</td><td>44,575</td><td>8.2%</td></tr><tr><td><b>الزيادة في النقدية</b></td><td><b>3,308</b></td><td>0.6%</td></tr></tbody></table></div><p class="eq-note" style="margin-top:8px">المصدر الوحيد التشغيلي لأن الشركة لا تتوسع بدين جديد في النموذج. الفرق الإجمالي بين المقبوضات والاستخدامات هو الزيادة في النقدية.</p><h3 style='margin:18px 0 8px'>د. أين يختلف الربح عن النقد؟</h3><div class="tbl-wrap"><table><thead><tr><th>البند</th><th>ما يحدث في عقود النشاط</th><th>أثر زيادته على النقد</th><th>2026</th><th>2031</th></tr></thead><tbody><tr><td>إيراد مستحق</td><td>زيارات منفذة ولم تُفوتر لجهة التأمين (فوترة شهرية متأخرة)</td><td>يخفض التشغيلي (إيراد بلا نقد بعد)</td><td>3,000</td><td>5,233</td></tr><tr><td>إيراد مقدم</td><td>باقات رعاية وإيجار أجهزة يُحصَّل مقدماً عن أشهر قادمة</td><td>يرفع التشغيلي الآن ثم يتحول لإيراد دون نقد</td><td>2,000</td><td>3,415</td></tr><tr><td>مصروفات مقدمة</td><td>تأمين مهني وتراخيص وصيانة سنوية مدفوعة مقدماً</td><td>يخفض التشغيلي (نقد قبل المصروف)</td><td>2,000</td><td>3,415</td></tr><tr><td>مصروفات مستحقة</td><td>أجور أطقم عن زيارات لم تُسدَّد ومصروفات تشغيل</td><td>يرفع التشغيلي (مصروف قبل النقد)</td><td>4,000</td><td>6,830</td></tr><tr><td>مخصص مطالبات ومرفوضات</td><td>التزام محتمل مقدّر لمطالبات المرضى والجهات (EAS 28)</td><td>غير نقدي الآن ونقد عند السداد</td><td>1,000</td><td>1,707</td></tr><tr><td>مخصص ECL</td><td>خسارة متوقعة على عملاء التأمين (EAS 47)</td><td>غير نقدي: يُضاف لصافي الربح</td><td>4,000</td><td>9,382</td></tr></tbody></table></div><h3 style='margin:18px 0 8px'>هـ. المخصصات والاحتياطيات</h3><div class="tbl-wrap"><table><thead><tr><th>البند</th><th>2027 تنبؤ</th><th>2028 تنبؤ</th><th>2029 تنبؤ</th><th>2030 تنبؤ</th><th>2031 تنبؤ</th></tr></thead><tbody><tr><td>مخصص ECL: رصيد آخر المدة</td><td>4,857</td><td>5,829</td><td>6,913</td><td>8,102</td><td>9,382</td></tr><tr><td>ديون معدومة مشطوبة</td><td>2,001</td><td>2,268</td><td>2,530</td><td>2,772</td><td>2,988</td></tr><tr><td>مخصص هبوط المخزون: رصيد</td><td>345</td><td>393</td><td>440</td><td>485</td><td>523</td></tr><tr><td>مخصص المطالبات والمرفوضات: رصيد</td><td>1,143</td><td>1,296</td><td>1,446</td><td>1,584</td><td>1,707</td></tr><tr><td>المحول للاحتياطي القانوني</td><td>672</td><td>793</td><td>35</td><td>0</td><td>0</td></tr><tr><td>رصيد الاحتياطي القانوني</td><td>4,172</td><td>4,965</td><td>5,000</td><td>5,000</td><td>5,000</td></tr><tr><td>توزيعات الأرباح</td><td>6,380</td><td>7,537</td><td>9,125</td><td>10,266</td><td>11,267</td></tr></tbody></table></div><p class="eq-note" style="margin-top:8px">حركة مخصص ECL = الرصيد السابق + مصروف ECL − المشطوب (70% من المصروف في النموذج). الاحتياطي يتوقف عن الزيادة عند 5,000 ثم تُوزَّع الأرباح بنسبة 50%. الاحتياطي تخصيص لحقوق الملكية ولا يؤثر على النقد.</p><div class="stance"><span class="stance-tag">خلاصة</span><p>نمو الإيراد المستحق والمصروفات المقدمة يستهلك نقداً حتى مع ارتفاع الأرباح، بينما يدعم الإيراد المقدم والمصروف المستحق التدفق مؤقتاً ثم ينعكس. لذلك تُراقب جودة الأرباح (التدفق التشغيلي ÷ صافي الربح) ومراحل الفوترة مع جهات التأمين.</p></div></section>
+<section class="reveal"><div class="s-head"><span class="s-num">04 — ربحية السهم</span><h2>معادلة EPS الأساسي والمخفض (EAS 22 / IAS 33)</h2><p class="s-sub">تُحسب على أساس الأرباح بعد حصة العاملين ومكافأة المجلس بحسب ما يجنَّب فعلاً من التوزيعات.</p></div><div class="eq-block"><div class="eq-title">الأساسي</div><div class="eq-formula" dir="ltr">EPS = (NP − Emp − BoD − Pref) ÷ WANS</div><p class="eq-note">NP صافي الربح بعد الضريبة، Emp حصة العاملين (القانون 159 لسنة 1981: لا تقل عن 10% من الأرباح القابلة للتوزيع ولا تتجاوز إجمالي الأجور السنوية)، BoD مكافأة المجلس، Pref توزيعات الممتازة، WANS المتوسط المرجح للأسهم.</p></div><div class="tbl-wrap"><table><thead><tr><th>العنصر</th><th>الأساسي</th><th>المخفض</th></tr></thead><tbody><tr><td>صافي الربح</td><td>11,625</td><td>11,625</td></tr><tr><td>حصة العاملين (10%)</td><td>(1,163)</td><td>(1,163)</td></tr><tr><td>مكافأة المجلس</td><td>(300)</td><td>(300)</td></tr><tr><td>الأرباح المتاحة للمساهمين العاديين</td><td>10,163</td><td>10,163</td></tr><tr><td>الأسهم (ألف): مرجحة + أسهم محتملة من برنامج حوافز</td><td>10,000</td><td>10,500</td></tr><tr><td><b>نصيب السهم (جنيه)</b></td><td><b>1.02</b></td><td><b>0.97</b></td></tr></tbody></table></div><p class="eq-note" style="margin-top:8px">الأرقام توضيحية. تحقق من أحدث نصوص EAS 22 والنظام الأساسي ومحضر الجمعية قبل تطبيق أسلوب الخصم.</p><div class="stance"><span class="stance-tag">ملاحظة تطبيقية</span><p>الأسهم المحتملة لا تُدرج إلا إذا كان أثرها مخفضاً. وتُعدَّل ربحية السهم بأثر رجعي عند أسهم المنحة أو التجزئة.</p></div></section>
+<section class="reveal"><div class="s-head"><span class="s-num">05 — سياسة الإيراد</span><h2>EAS 48 / IFRS 15: نموذج الخطوات الخمس</h2><p class="s-sub">الإيراد في هذا النشاط يقوم على عقود مجمعة: خدمة تمريضية + جهاز مؤجر + مستهلكات.</p></div><div class="tbl-wrap"><table><thead><tr><th>الخطوة</th><th>التطبيق على النشاط</th></tr></thead><tbody><tr><td>1. تحديد العقد</td><td>عقد مع المريض أو جهة التأمين أو المستشفى بحقوق والتزامات واضحة وجدوى تحصيل محتملة. التفويض التأميني شرط وجود العقد عملياً.</td></tr><tr><td>2. التزامات الأداء</td><td>الخدمة التمريضية التزام أداء مستقل عن إيجار الجهاز. الإيجار مكوّن تأجيري يخضع لـ EAS 49 وليس EAS 48، والمستهلكات التزام منفصل إن بيعت مستقلة.</td></tr><tr><td>3. سعر المعاملة</td><td>السعر المتفق عليه ناقص المقابل المتغير المتوقع (المرفوضات والخصومات التعاقدية).</td></tr><tr><td>4. التوزيع</td><td>في الباقات المجمعة يوزَّع السعر على أساس سعر البيع المستقل لكل مكوّن (قائمة أسعار الزيارة وإيجار الجهاز منفرداً).</td></tr><tr><td>5. الاعتراف</td><td>الزيارة عند أدائها وتوثيقها (نقطة زمنية). الإيجار بالقسط الثابت على مدة التأجير.</td></tr></tbody></table></div><div class="signals"><div class="signal"><div class="ico">ر</div><div><h3>المقابل المتغير</h3><p>تقدَّر نسبة الرفض بطريقة القيمة المتوقعة من تاريخ الرفض لكل جهة تأمين، مع قيد يمنع الاعتراف بإيراد يُرجَّح عكسه جوهرياً، وتُراجع كل فترة.</p></div></div><div class="signal"><div class="ico">ق</div><div><h3>القيد المحاسبي</h3><p>من حـ/ الإيراد إلى حـ/ التزام الاسترداد أو المدينين عن الجزء المتوقع رفضه. ولا يُحمَّل مصروف ديون معدومة.</p></div></div><div class="signal"><div class="ico">ف</div><div><h3>فصل الفترات</h3><p>زيارات آخر الشهر غير المفوترة تُثبت كأصل تعاقدي (إيراد مستحق) بتوثيق جداول الأطقم وإثبات التنفيذ.</p></div></div></div></section>
+<section class="reveal"><div class="s-head"><span class="s-num">06 — الأجهزة المؤجرة</span><h2>التصنيف والإهلاك (EAS 49 / EAS 10)</h2><p class="s-sub">الشركة مؤجِّر: يُصنَّف الإيجار تمويلياً فقط إذا انتقلت جوهرياً مخاطر ومنافع الملكية للمريض.</p></div><div class="tbl-wrap"><table><thead><tr><th>المعيار</th><th>الحكم على النشاط</th></tr></thead><tbody><tr><td>نقل الملكية في نهاية المدة</td><td>لا — يعود الجهاز للشركة</td></tr><tr><td>مدة الإيجار مقابل العمر الإنتاجي</td><td>قصيرة جداً بالنسبة للعمر</td></tr><tr><td>القيمة الحالية للدفعات مقابل القيمة العادلة</td><td>أقل جوهرياً</td></tr><tr><td>تحمل المخاطر (صيانة، استبدال، تلف)</td><td>على الشركة</td></tr><tr><td><b>الخلاصة</b></td><td><b>إيجار تشغيلي: يبقى الجهاز أصلاً ثابتاً ويُعترف بالإيجار بالقسط الثابت</b></td></tr></tbody></table></div><div class="tbl-wrap"><table><thead><tr><th>فئة الجهاز</th><th>عمر إنتاجي استرشادي</th><th>الطريقة</th></tr></thead><tbody><tr><td>مكثفات الأكسجين</td><td>5 سنوات</td><td>قسط ثابت</td></tr><tr><td>أجهزة التنفس الصناعي وBiPAP</td><td>7 سنوات</td><td>قسط ثابت</td></tr><tr><td>أسرّة طبية</td><td>8 – 10 سنوات</td><td>قسط ثابت</td></tr><tr><td>شاشات المتابعة وأجهزة الشفط</td><td>5 سنوات</td><td>قسط ثابت</td></tr></tbody></table></div><p class="eq-note" style="margin-top:8px">الأعمار استرشادية وتُحدَّد بتقييم فني من واقع بيانات المصنّع وخبرة الشركة، وتُراجع سنوياً مع القيمة التخريدية. التكاليف المباشرة الأولية تُرسمل وتُستنفد على مدة التأجير. وجود أجهزة معطلة أو مفقودة بالمنازل مؤشر اضمحلال يستدعي الاختبار.</p><div class="refs" style="margin-top:18px"><span class="ref-chip"><b>معيار:</b> EAS 49 / IFRS 16</span><span class="ref-chip"><b>معيار:</b> EAS 10 / IAS 16</span><span class="ref-chip"><b>معيار:</b> EAS 31 / IAS 36</span></div></section>
+<section class="reveal"><div class="s-head"><span class="s-num">07 — بروتوكول التقفيل</span><h2>ثلاث مطابقات تُغلق قبل وصول المراجع</h2><p class="s-sub">خطوات عملية للمدير المالي مع أثرها المحاسبي.</p></div><h3 style="margin:18px 0 8px">أ. الكاش الطائر</h3><div class="tbl-wrap"><table><thead><tr><th>الخطوة</th><th>الإجراء</th><th>القيد / المعالجة</th></tr></thead><tbody><tr><td>1</td><td>جرد مفاجئ لعهد المحصلين والتمريض في آخر يوم عمل مع توقيع المستلم</td><td>—</td></tr><tr><td>2</td><td>مطابقة الإيصالات المسلّمة بالتحصيل المسجل بنظام الفوترة</td><td>تسوية بكشف فروق</td></tr><tr><td>3</td><td>تحصيل لم يُورَّد: يُثبت قبل التقفيل</td><td>من حـ/ نقدية بالطريق إلى حـ/ المدينين</td></tr><tr><td>4</td><td>عجز غير مبرر</td><td>من حـ/ مدينون عهد (مسؤول) أو مصروف عجز بقرار معتمد</td></tr><tr><td>5</td><td>زيادة غير معلومة المصدر</td><td>إلى حـ/ أرصدة دائنة أخرى حتى الفحص، ولا تُحمَّل إيراداً</td></tr></tbody></table></div><h3 style="margin:18px 0 8px">ب. المدينون ومخصص ECL (EAS 47 / IFRS 9)</h3><div class="tbl-wrap"><table><thead><tr><th>الجهة</th><th>0–90 يوم</th><th>91–180</th><th>181–365</th><th>+365</th></tr></thead><tbody><tr><td>شركات التأمين</td><td>1%</td><td>4%</td><td>12%</td><td>35%</td></tr><tr><td>المستشفيات</td><td>2%</td><td>6%</td><td>18%</td><td>45%</td></tr><tr><td>جهات حكومية</td><td>0.5%</td><td>2%</td><td>8%</td><td>25%</td></tr><tr><td>أفراد</td><td>3%</td><td>10%</td><td>30%</td><td>70%</td></tr></tbody></table></div><p class="eq-note" style="margin-top:8px">النهج المبسط (مصفوفة مخصصات) والنسب توضيحية. تُعاير على خسائر السنوات الماضية ثم تُعدَّل بعوامل مستقبلية مثل السيولة وأسعار الفائدة وسلوك كل جهة سداداً. مصادقات الأرصدة تُرسل قبل تاريخ القوائم بوقت كافٍ وفروقها تُفسَّر كتابياً.</p><h3 style="margin:18px 0 8px">ج. المخزون الطبي (EAS 2)</h3><div class="tbl-wrap"><table><thead><tr><th>الحالة</th><th>المعالجة</th></tr></thead><tbody><tr><td>منتهي الصلاحية أو تالف</td><td>إعدام بمحضر لجنة وإثبات الخسارة بالقيمة الدفترية الكاملة، مع التخلص الآمن وفق اشتراطات النفايات الطبية</td></tr><tr><td>قريب الانتهاء</td><td>تخفيض إلى صافي القيمة البيعية أو مخصص هبوط حسب فرص الصرف</td></tr><tr><td>عهد لدى الأطقم</td><td>جرد فعلي وتوقيع مستلمين، والمستهلك دون توثيق يُحمَّل بحسب سياسة الشركة</td></tr><tr><td>فروق الجرد</td><td>تحليل أسباب ثم قيد بقرار معتمد، ولا تُرحَّل بين الفترات</td></tr></tbody></table></div></section>
+<section class="reveal"><div class="s-head"><span class="s-num">08 — برنامج المراجعة</span><h2>أهم 5 إجراءات جوهرية وكيف يستعد لها المدير المالي</h2><p class="s-sub">الاستعداد المبكر هو ما يمنع التحفظ في تقرير المراقب.</p></div><div class="tbl-wrap"><table><thead><tr><th>الإجراء</th><th>ما يفعله المراجع</th><th>استعداد المدير المالي</th></tr></thead><tbody><tr><td>1. مصادقات المدينين (ISA 505)</td><td>إرسال مصادقات مباشرة واختبار المتحصلات اللاحقة</td><td>كشوف مطابقة، أعمار ديون، تفسير كل فرق، وتتبع التحصيل بعد تاريخ القوائم</td></tr><tr><td>2. اختبار الإيراد وفصل الفترات (ISA 240)</td><td>ربط عينة فواتير بسجل الزيارات وجداول الأطقم والتفويضات</td><td>ربط آلي بين النظام الطبي والفوترة وتقرير بزيارات آخر 15 يوماً</td></tr><tr><td>3. حضور جرد المخزون (ISA 501)</td><td>ملاحظة الجرد الفعلي واختبار الصلاحية والتقييم</td><td>تعليمات جرد مكتوبة، وكشوف عهد الأطقم وتقرير الراكد والمنتهي</td></tr><tr><td>4. التقديرات المحاسبية (ISA 540)</td><td>اختبار منهجية ECL والمرفوضات والأعمار الإنتاجية</td><td>وثيقة منهجية معتمدة، واختبار رجعي لدقة تقديرات السنة السابقة</td></tr><tr><td>5. الأصول والنقدية</td><td>التحقق من وجود الأجهزة المؤجرة والتأكد من مصادقات البنوك</td><td>سجل أجهزة بالرقم التسلسلي والموقع، ومطابقات بنكية حتى آخر يوم</td></tr></tbody></table></div><div class="stance"><span class="stance-tag">قاعدة الاستعداد</span><p>كل رقم بالقوائم له ملف دعم: مصدر، مطابقة، موافقة، ثم إيضاح. غياب أي حلقة هو ما يولّد التحفظ أو فقرة لفت انتباه.</p></div></section>
+<section class="reveal"><div class="s-head"><span class="s-num">09 — طرق التنبؤ</span><h2>كيف نبني التنبؤ؟ ثلاثة مستويات</h2><p class="s-sub">من الأبسط إلى الأدق، ويُفضل الجمع بينها.</p></div><div class="tbl-wrap"><table><thead><tr><th>الطريقة</th><th>الفكرة</th><th>التطبيق على النشاط</th></tr></thead><tbody><tr><td>نسبة من المبيعات</td><td>كل بند يرتبط بنسبة من الإيراد</td><td>العملاء 25% من الإيراد، المخزون 45% من المستهلكات، الإدارية 20%</td></tr><tr><td>محركات تشغيلية (Driver-based)</td><td>الإيراد = كمية × سعر</td><td>الخدمات: زيارات × سعر الزيارة. التأجير: أجهزة × إشغال × إيجار شهري × 12</td></tr><tr><td>سيناريوهات وحساسية</td><td>تغيير المحركات الرئيسية</td><td>ثلاثة سيناريوهات للنمو وشبكة حساسية لـ WACC والنمو الأبدي (القسم 13)</td></tr></tbody></table></div><div class="tbl-wrap"><table><thead><tr><th>المحرك</th><th>2026</th><th>التغير المفترض</th><th>الأثر</th></tr></thead><tbody><tr><td>زيارات التمريض</td><td>155,000 زيارة</td><td>+9%</td><td>نمو الخدمات ≈ (1.09 × 1.055) = 15%</td></tr><tr><td>سعر الزيارة</td><td>400 جنيه</td><td>+5.5%</td><td></td></tr><tr><td>أسطول الأجهزة المؤجرة</td><td>2,000 جهاز</td><td>+5%</td><td>نمو التأجير ≈ (1.05 × 76/75 × 1.055) = 12%</td></tr><tr><td>نسبة الإشغال</td><td>75%</td><td>76%</td><td></td></tr><tr><td>الإيجار الشهري</td><td>1,000 جنيه</td><td>+5.5%</td><td></td></tr><tr><td>تكلفة الزيارة (أجور)</td><td>≈155 جنيه</td><td>ثابتة كنسبة 38.7% من الخدمات</td><td></td></tr></tbody></table></div><p class="eq-note" style="margin-top:8px">التحقق: 155,000 × 400 = 62,000 ألف. و2,000 × 75% × 1,000 × 12 = 18,000 ألف. نمو الخدمات 15/14/12/10/8% والتأجير 12/11/10/8/7% للسنوات 2027–2031.</p></section><section class="reveal"><div class="s-head"><span class="s-num">10 — التحليل المالي</span><h2>نسب الأداء والسيولة والكفاءة</h2><p class="s-sub">مؤشرات تقرأ جودة النمو وليس حجمه فقط.</p></div><div class="tbl-wrap"><table><thead><tr><th>البند</th><th>2026 فعلي</th><th>2027 تنبؤ</th><th>2028 تنبؤ</th><th>2029 تنبؤ</th><th>2030 تنبؤ</th><th>2031 تنبؤ</th></tr></thead><tbody><tr><td>هامش مجمل الربح</td><td>45.0%</td><td>44.8%</td><td>44.7%</td><td>44.6%</td><td>44.5%</td><td>44.4%</td></tr><tr><td>هامش EBITDA</td><td>29.4%</td><td>28.9%</td><td>28.5%</td><td>28.2%</td><td>28.0%</td><td>27.8%</td></tr><tr><td>هامش صافي الربح</td><td>14.5%</td><td>14.7%</td><td>15.3%</td><td>15.8%</td><td>16.2%</td><td>16.5%</td></tr><tr><td>نسبة التداول</td><td>1.83</td><td>1.71</td><td>1.65</td><td>1.67</td><td>1.92</td><td>2.13</td></tr><tr><td>أيام التحصيل DSO</td><td>91</td><td>91</td><td>91</td><td>91</td><td>92</td><td>92</td></tr><tr><td>أيام المخزون</td><td>166</td><td>166</td><td>166</td><td>166</td><td>166</td><td>166</td></tr><tr><td>أيام السداد DPO</td><td>61</td><td>61</td><td>61</td><td>61</td><td>61</td><td>61</td></tr><tr><td>العائد على حقوق الملكية ROE</td><td>25.5%</td><td>27.4%</td><td>28.0%</td><td>27.9%</td><td>27.3%</td><td>26.2%</td></tr><tr><td>العائد على رأس المال المستثمر ROIC</td><td>23.8%</td><td>25.2%</td><td>26.1%</td><td>26.5%</td><td>26.1%</td><td>24.6%</td></tr><tr><td>صافي الدين ÷ EBITDA</td><td>0.23</td><td>0.19</td><td>0.11</td><td>0.02</td><td>-0.10</td><td>-0.25</td></tr><tr><td>تغطية الفوائد (EBIT ÷ فوائد)</td><td>7.0</td><td>7.8</td><td>11.9</td><td>20.5</td><td>49.2</td><td>بلا فوائد</td></tr><tr><td>دوران الأجهزة المؤجرة (إيراد التأجير ÷ صافي الأجهزة)</td><td>0.60</td><td>0.60</td><td>0.60</td><td>0.60</td><td>0.60</td><td>0.60</td></tr></tbody></table></div><div class="stance"><span class="stance-tag">كيف تُقرأ؟</span><p>ارتفاع DSO وحده إنذار مبكر لتشدد شركات التأمين أو لزيادة المرفوضات، وينعكس مباشرة على ECL. وانخفاض دوران الأجهزة يعني أسطولاً غير مشغل.</p></div></section><section class="reveal"><div class="s-head"><span class="s-num">11 — WACC والقيمة الحالية</span><h2>التقييم بخصم التدفقات النقدية الحرة (DCF)</h2><p class="s-sub">تاريخ التقييم 31/12/2026. المعدلات افتراضية تعكس بيئة فائدة مرتفعة ويجب تحديثها بأسعار السوق الفعلية.</p></div><div class="eq-block"><div class="eq-title">تكلفة حقوق الملكية (CAPM)</div><div class="eq-formula" dir="ltr">Ke = Rf + β × ERP</div><p class="eq-note">Rf 20.0% + 0.9 × 6.0% = 25.4%</p></div><div class="eq-block"><div class="eq-title">المتوسط المرجح لتكلفة رأس المال</div><div class="eq-formula" dir="ltr">WACC = Wd × Kd × (1 − t) + We × Ke</div><p class="eq-note">15.0% × 22.0% × (1 − 22.5%) + 85.0% × 25.4% = 24.1%</p></div><div class="tbl-wrap"><table><thead><tr><th>السنة</th><th>2027</th><th>2028</th><th>2029</th><th>2030</th><th>2031</th></tr></thead><tbody><tr><td>التدفق النقدي الحر FCFF</td><td>8,701</td><td>10,329</td><td>12,260</td><td>14,688</td><td>16,771</td></tr><tr><td>معامل الخصم 1/(1+WACC)^n</td><td>0.805</td><td>0.649</td><td>0.523</td><td>0.421</td><td>0.339</td></tr><tr><td><b>القيمة الحالية للتدفق</b></td><td><b>7,009</b></td><td><b>6,701</b></td><td><b>6,407</b></td><td><b>6,183</b></td><td><b>5,687</b></td></tr></tbody></table></div><p class="eq-note" style="margin-top:8px">FCFF = EBIT × (1 − t) + الإهلاك − الإنفاق الرأسمالي − الزيادة في رأس المال العامل التشغيلي.</p><div class="eq-block"><div class="eq-title">القيمة النهائية (Gordon)</div><div class="eq-formula" dir="ltr">TV = FCFF₂₀₃₁ × (1 + g) ÷ (WACC − g)</div><p class="eq-note">g = 10.0% نمو أبدي اسمي. TV = 130,398 وقيمتها الحالية 44,216 ألف.</p></div><div class="tbl-wrap"><table><thead><tr><th>بند التقييم</th><th>ألف جنيه</th></tr></thead><tbody><tr><td>مجموع القيمة الحالية للتدفقات 2027–2031</td><td>31,988</td></tr><tr><td>القيمة الحالية للقيمة النهائية</td><td>44,216</td></tr><tr><td><b>قيمة المنشأة EV</b></td><td><b>76,204</b></td></tr><tr><td>صافي الدين 2026 (قروض 11,500 − نقدية 6,000)</td><td>(5,500)</td></tr><tr><td><b>قيمة حقوق الملكية</b></td><td><b>70,704</b></td></tr><tr><td><b>قيمة السهم (10 ملايين سهم)</b></td><td><b>7.07 جنيه</b></td></tr><tr><td>نسبة القيمة النهائية من EV</td><td>58.0%</td></tr></tbody></table></div><div class="eq-block"><div class="eq-title">القيمة الحالية والمستقبلية</div><div class="eq-formula" dir="ltr">PV = FV ÷ (1 + r)ⁿ    ،    FV = PV × (1 + r)ⁿ</div><p class="eq-note">مثال: 10,000 اليوم بمعدل 24.1% لمدة 5 سنوات = 29,491 مستقبلاً. و100,000 تُستلم بعد 5 سنوات تساوي اليوم 33,909.</p></div></section><section class="reveal"><div class="s-head"><span class="s-num">12 — جدوى جهاز مؤجر</span><h2>تقييم قرار شراء جهاز طبي للتأجير (NPV)</h2><p class="s-sub">مثال لقرار رأسمالي واحد بنفس WACC. أرقام بالألف جنيه للجهاز.</p></div><div class="tbl-wrap"><table><thead><tr><th>المدخل</th><th>القيمة</th></tr></thead><tbody><tr><td>تكلفة الجهاز</td><td>20</td></tr><tr><td>الإيجار الشهري</td><td>1.0</td></tr><tr><td>نسبة الإشغال</td><td>75.0%</td></tr><tr><td>صيانة وتوصيل (% من الإيراد)</td><td>20.0%</td></tr><tr><td>العمر / القيمة التخريدية</td><td>6 سنوات / 2</td></tr><tr><td>صافي التدفق السنوي</td><td>7.20</td></tr></tbody></table></div><div class="tbl-wrap"><table><thead><tr><th>النتيجة</th><th>القيمة</th></tr></thead><tbody><tr><td>صافي القيمة الحالية NPV</td><td>2.22</td></tr><tr><td>معدل العائد الداخلي IRR</td><td>28.7%</td></tr><tr><td>فترة الاسترداد البسيطة</td><td>2.8 سنة</td></tr><tr><td>نسبة الإشغال التعادلية (NPV = 0)</td><td>67.3%</td></tr></tbody></table></div><div class="stance"><span class="stance-tag">القرار</span><p>المشروع مقبول لأن IRR أعلى من WACC، لكن هامش الأمان محدود: هبوط الإشغال إلى النسبة التعادلية يلغي الجدوى. لذلك يُربط قرار توسيع الأسطول بمؤشر إشغال شهري.</p></div></section><section class="reveal"><div class="s-head"><span class="s-num">13 — السيناريوهات والحساسية</span><h2>كيف تتغير القيمة؟</h2><p class="s-sub">السيناريو = تغيير نمو الإيراد السنوي بالنقاط المئوية مع بقاء بقية الافتراضات.</p></div><div class="tbl-wrap"><table><thead><tr><th>السيناريو</th><th>إيراد 2031</th><th>EBITDA 2031</th><th>صافي ربح 2031</th><th>EV</th><th>حقوق الملكية</th><th>قيمة السهم</th></tr></thead><tbody><tr><td>متشائم</td><td>113,749</td><td>31,750</td><td>18,746</td><td>78,037</td><td>72,537</td><td>7.25</td></tr><tr><td>أساسي</td><td>136,596</td><td>37,978</td><td>22,534</td><td>76,204</td><td>70,704</td><td>7.07</td></tr><tr><td>متفائل</td><td>156,028</td><td>43,280</td><td>25,758</td><td>73,825</td><td>68,325</td><td>6.83</td></tr></tbody></table></div><p class="eq-note" style="margin-top:8px">المتشائم: نمو أقل بـ4 نقاط سنوياً. المتفائل: أعلى بـ3 نقاط.</p><div class="tbl-wrap"><table><thead><tr><th>WACC \ النمو الأبدي</th><th>8%</th><th>10%</th><th>12%</th></tr></thead><tbody><tr><td>22.0%</td><td>7.60</td><td>8.50</td><td>9.77</td></tr><tr><td>24.1%</td><td>6.45</td><td>7.07</td><td>7.89</td></tr><tr><td>26.0%</td><td>5.68</td><td>6.15</td><td>6.74</td></tr><tr><td>28.0%</td><td>5.02</td><td>5.36</td><td>5.80</td></tr></tbody></table></div><p class="eq-note" style="margin-top:8px">قيمة السهم بالجنيه لكل تركيبة. الحساسية العالية للنمو الأبدي تذكّر بأن القيمة النهائية تمثل الجزء الأكبر من التقييم.</p><div class="stance"><span class="stance-tag">استخدام النتائج</span><p>لا تُقدَّم قيمة واحدة. يُعرض مدى مع افتراضاته، ويُراجع النموذج كل ربع سنة بعد تحديث الزيارات والإشغال والمرفوضات.</p></div></section>
+<section class="reveal"><div class="s-head"><span class="s-num">14 — الخلاصة</span><h2>ثلاث أولويات لآخر العام</h2><p class="s-sub"></p></div><div class="cards"><div class="card"><span class="num">1</span><h3>وثّق التقديرات</h3><p>ECL والمرفوضات والأعمار الإنتاجية تُكتب منهجياً قبل التقفيل.</p></div><div class="card"><span class="num">2</span><h3>طابق الكاش والمدينين</h3><p>الكاش الطائر والمصادقات أول ما يُفتح مع المراجع.</p></div><div class="card"><span class="num">3</span><h3>جهّز الأدلة</h3><p>لا رقم بلا مستند ولا مستند بلا موافقة.</p></div></div><div class="stance"><span class="stance-tag">تنبيه مهني</span><p>هذه دراسة تطبيقية إرشادية. تُراجع النسب والأعمار والنصوص القانونية والضريبية مع المراجع الخارجي والمستشار القانوني وأحدث إصدارات المعايير قبل الاعتماد.</p></div></section>
+</div>
+<footer class="site-footer">
+  <div class="f-inner">
+    <div class="footer-top">
+      <div class="footer-id">
+        <img class="footer-photo" loading="lazy" decoding="async" src="data:image/jpeg;base64,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" alt="عبدالفتاح قشطي">
+        <div>
+          <div class="footer-name">عبدالفتاح قشطي</div>
+          <div class="footer-role">مطوّر نظم ورقابة مالية</div>
+          <div class="footer-brand">المنظومة الحديثة للإدارة المالية</div>
+        </div>
+      </div>
+      <div class="footer-meta"><div><span class="dot">●</span> كبسولة التقفيل والمراجعة · نهاية السنة المالية 2026</div><div><span class="dot">●</span> معايير المحاسبة المصرية (EAS) وما يقابلها دولياً (IFRS)</div><div><span class="dot">●</span> نموذج برومبت مهني قابل للنسخ والتطبيق</div></div></div></div><div class="footer-rule">إطار إرشادي للاستعانة بالذكاء الاصطناعي في إعداد التقفيل والمراجعة — لا يغني عن رأي المراجع الخارجي والمستشار القانوني والضريبي.</div>
+  </div>
+</footer>
+<button id="back-to-top" aria-label="العودة لأعلى الصفحة" title="العودة لأعلى الصفحة">↑</button>
+
+<button id="export-pdf" aria-label="حفظ الدراسة كملف PDF أو طباعتها" title="حفظ الدراسة كملف PDF أو طباعتها">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h9l3 3v4"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v8H6z"/></svg>
+  <span>حفظ / طباعة PDF</span>
+</button>
+
+<script>const els=document.querySelectorAll('.reveal');const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});els.forEach(e=>io.observe(e));
+document.getElementById('export-pdf').onclick=()=>window.print();
+const bb=document.getElementById('back-to-top');addEventListener('scroll',()=>bb.classList.toggle('visible',scrollY>500));bb.onclick=()=>scrollTo({top:0,behavior:'smooth'});</script></body></html>
